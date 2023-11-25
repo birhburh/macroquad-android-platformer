@@ -1,0 +1,25 @@
+[package]
+name = "platformer"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.android]
+res = "android_res"
+assets = "android_assets"
+icon = "@mipmap/ic_launcher"
+label = "platformer"
+min_sdk_version = 26
+[[package.metadata.android.permission]]
+name = "android.permission.ACCESS_FINE_LOCATION"
+max_sdk_version = 30
+
+[dependencies]
+# localy I use same version of macroquad but it depends on local miniquad that comments out code in setFullScreen function, because it doesn't compile in termux otherwise
+# macroquad = { path = "../macroquad" }
+# macroquad-platformer = { path = "../macroquad/physics-platformer" }
+# macroquad-tiled = { path = "../macroquad/tiled" }
+macroquad = "=0.4.1"
+macroquad-platformer = "=0.2.0"
+macroquad-tiled = "=0.2.0"
+once_cell = "1"
+
